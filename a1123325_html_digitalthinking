@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embed PlotDB Chart</title>
+</head>
+<body>
+    <h1>Embedded PlotDB Chart</h1>
+    <p>This is an embedded chart from PlotDB:</p>
+    <iframe 
+        src="https://plotdb.io/v/chart/37215" 
+        width="800" 
+        height="600" 
+        frameborder="0" 
+        allowfullscreen>
+    </iframe>
+</body>
+</html>
