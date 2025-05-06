@@ -9,8 +9,9 @@
     :root {
       --main-color: #ec407a;
       --accent-color: #fce4ec;
-      --bg-color: #fff8f9;
+      --bg-color: #f8bbd0;
       --text-color: #4e2a35;
+      --hover-color: #f48fb1;
     }
 
     body {
@@ -33,6 +34,7 @@
       font-size: 2.6em;
       color: #ad1457;
       margin: 0;
+      text-transform: uppercase;
     }
 
     .container {
@@ -118,7 +120,7 @@
     }
 
     .view-link:hover {
-      background-color: #d81b60;
+      background-color: var(--hover-color);
     }
 
     @media (max-width: 768px) {
