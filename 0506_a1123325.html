@@ -9,7 +9,7 @@
     :root {
       --main-color: #ec407a;
       --accent-color: #fce4ec;
-      --bg-color: #fafafa;
+      --bg-color: #fff8f9;
       --text-color: #4e2a35;
     }
 
@@ -18,18 +18,19 @@
       font-family: 'Noto Sans TC', sans-serif;
       background-color: var(--bg-color);
       color: var(--text-color);
-      line-height: 1.6;
+      line-height: 1.8;
+      font-size: 18px;
     }
 
     header {
       background: linear-gradient(90deg, #f8bbd0, #fce4ec);
-      padding: 40px 20px;
+      padding: 50px 20px;
       text-align: center;
       border-bottom: 4px solid var(--main-color);
     }
 
     header h1 {
-      font-size: 2.4em;
+      font-size: 2.6em;
       color: #ad1457;
       margin: 0;
     }
@@ -37,48 +38,49 @@
     .container {
       max-width: 960px;
       margin: 0 auto;
-      padding: 30px 20px;
+      padding: 40px 20px;
     }
 
     .intro {
       background: #fff;
-      border-left: 6px solid var(--main-color);
-      border-radius: 10px;
-      padding: 20px 25px;
-      margin-bottom: 40px;
-      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+      border-left: 8px solid var(--main-color);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 50px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
     }
 
     .intro img {
       width: 100%;
-      max-height: 400px;
+      max-height: 460px;
       object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 15px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      border: 2px solid #f8bbd0;
     }
 
     .chart-card {
       background: #fff;
       border-radius: 16px;
-      margin-bottom: 40px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      margin-bottom: 50px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
       overflow: hidden;
       transition: box-shadow 0.3s ease;
     }
 
     .chart-card:hover {
-      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
     }
 
     .chart-header {
       background-color: var(--accent-color);
-      padding: 20px;
+      padding: 25px;
       border-bottom: 2px solid #f8bbd0;
     }
 
     .chart-header h2 {
       margin: 0;
-      font-size: 1.5em;
+      font-size: 1.6em;
       color: #c2185b;
     }
 
@@ -96,20 +98,20 @@
     }
 
     .chart-description {
-      padding: 20px 25px;
+      padding: 25px 30px;
       font-size: 1em;
       background: #fdf4f8;
-      border-left: 4px solid var(--main-color);
+      border-left: 5px solid var(--main-color);
     }
 
     .view-link {
       display: inline-block;
-      margin: 20px auto;
+      margin-top: 20px;
       background-color: var(--main-color);
       color: #fff;
-      padding: 12px 24px;
+      padding: 12px 28px;
       font-weight: bold;
-      border-radius: 6px;
+      border-radius: 8px;
       text-align: center;
       text-decoration: none;
       transition: background 0.3s ease;
@@ -121,10 +123,10 @@
 
     @media (max-width: 768px) {
       header h1 {
-        font-size: 1.8em;
+        font-size: 2em;
       }
       .chart-header h2 {
-        font-size: 1.3em;
+        font-size: 1.4em;
       }
     }
   </style>
@@ -135,19 +137,8 @@
   </header>
 
   <div class="container">
-    <!-- Thêm nội dung với hình ảnh -->
     <div class="intro">
-      <img src="C:\Users\Babbiii\Downloads\0506.webp" alt="長者旅遊照片">
-      <p>高雄，這座充滿陽光與活力的南方城市，正邁向更友善的高齡未來。在一片燦爛的金黃花海中，長者們攜手同行，迎著微風與陽光，踏上屬於他們的探索之旅。他們的笑容映襯著遠方的雪山與藍天，每一步都蘊含著對生活的熱愛與堅持。</p>
-      <p>這不只是一次旅行，更是一場心靈與健康的躍動。「興趣結合健康旅遊」不只是一次旅程，而是一種新的生活方式。透過戶外活動與文化體驗，長者能夠建立社交聯繫，減少孤獨感；智慧穿戴裝置與社區支援系統則提供即時健康監測，確保旅途安全。</p>
-      <p>同時，森林療癒、養生溫泉等活動，讓旅遊成為身心健康的重要支柱。當長者能在興趣與探索中找到活力與歸屬，高齡友善城市的願景，便真正照進現實。</p>
-    </div>
-
-    <div class="intro">
-      <p>
-        本頁面展示來自 PlotDB 的互動式圖表，以視覺化方式呈現高雄市各行政區五歲年齡組別（60歲以上）性別人口統計資料。
-        您可以透過點擊圖表深入觀察特定年齡層或行政區的老年人口結構。
-      </p>
+      <p>本頁面展示來自 PlotDB 的互動式圖表，以視覺化方式呈現高雄市各行政區五歲年齡組別（60歲以上）性別人口統計資料。您可以透過點擊圖表深入觀察特定年齡層或行政區的老年人口結構。</p>
     </div>
 
     <!-- Chart 1 -->
@@ -178,6 +169,14 @@
         <p>可協助政府機關規劃長照與高齡社區資源配置。</p>
         <a class="view-link" href="https://plotdb.io/v/chart/37448" target="_blank">前往 PlotDB 查看</a>
       </div>
+    </div>
+
+    <!-- Section with image and story -->
+    <div class="intro">
+      <img src="" alt="長者旅遊照片">
+      <p>高雄，這座充滿陽光與活力的南方城市，正邁向更友善的高齡未來。在一片燦爛的金黃花海中，長者們攜手同行，迎著微風與陽光，踏上屬於他們的探索之旅。他們的笑容映襯著遠方的雪山與藍天，每一步都蘊含著對生活的熱愛與堅持。</p>
+      <p>這不只是一次旅行，更是一場心靈與健康的躍動。「興趣結合健康旅遊」不只是一次旅程，而是一種新的生活方式。透過戶外活動與文化體驗，長者能夠建立社交聯繫，減少孤獨感；智慧穿戴裝置與社區支援系統則提供即時健康監測，確保旅途安全。</p>
+      <p>同時，森林療癒、養生溫泉等活動，讓旅遊成為身心健康的重要支柱。當長者能在興趣與探索中找到活力與歸屬，高齡友善城市的願景，便真正照進現實。</p>
     </div>
   </div>
 </body>
