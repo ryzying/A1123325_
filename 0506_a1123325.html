@@ -98,11 +98,22 @@
       background-color: #ec407a;
       transform: scale(1.05);
     }
+
+    .chart-description {
+      margin-top: 15px;
+      font-size: 1em;
+      line-height: 1.7;
+      color: #6b4e57;
+      background: #fff0f8;
+      padding: 15px;
+      border-left: 4px solid #ec407a;
+      border-radius: 6px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>使用 PlotDB 進行資料視覺化</h1>
+    <h1>113年12月行政區五歲年齡組性別人口統計_高雄市</h1>
 
     <div class="description">
       <p>
@@ -112,24 +123,30 @@
 
     <!-- 第一個圖表 -->
     <div class="chart-section">
-      <h2 class="chart-title">圖表一：互動式資料可視化</h2>
+      <h2 class="chart-title">圖表一：60至80歲年齡層</h2>
       <div class="iframe-wrapper">
         <iframe src="https://plotdb.io/v/chart/37437" allowfullscreen></iframe>
       </div>
       <p style="text-align: center;">
         <a class="view-link" href="https://plotdb.io/v/chart/37437" target="_blank">在 PlotDB 上查看完整圖表</a>
       </p>
+      <div class="chart-description">
+        本圖表呈現高雄市113年12月間，<strong>60至80歲年齡層</strong>的性別人口分布情形。透過五歲一組的方式，詳細展示各行政區中男性與女性的老年人口數，便於分析老化程度與潛在社福需求。互動圖表功能可協助快速比較區域差異，並觀察人口結構趨勢。
+      </div>
     </div>
 
     <!-- 第二個圖表 -->
     <div class="chart-section">
-      <h2 class="chart-title">圖表二：進階資料洞察分析</h2>
+      <h2 class="chart-title">圖表二：80歲以上超高齡人口</h2>
       <div class="iframe-wrapper">
         <iframe src="https://plotdb.io/v/chart/37448" allowfullscreen></iframe>
       </div>
       <p style="text-align: center;">
         <a class="view-link" href="https://plotdb.io/v/chart/37448" target="_blank">在 PlotDB 上查看完整圖表</a>
       </p>
+      <div class="chart-description">
+        此圖聚焦於高雄市各行政區<strong>80歲以上超高齡人口</strong>的性別統計。此年齡層為高齡化社會中的關鍵觀察族群，圖表有助於評估長照、醫療與社區關懷資源配置的迫切性。使用者可經由互動操作深入了解特定區域的長者性別結構與人口集中度。
+      </div>
     </div>
   </div>
 </body>
