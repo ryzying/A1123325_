@@ -7,11 +7,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --main-color: #ec407a;
-      --accent-color: #fce4ec;
-      --bg-color: #f8bbd0;
-      --text-color: #4e2a35;
-      --hover-color: #f48fb1;
+      --main-color: #ec407a; 
+      --accent-color: #fce4ec; 
+      --bg-color: #f8bbd0; 
+      --text-color: #4e2a35; 
+      --hover-color: #f48fb1; 
+      --card-bg-color: #ffffff; 
+      --card-shadow: rgba(0, 0, 0, 0.1); 
     }
 
     body {
@@ -21,11 +23,12 @@
       color: var(--text-color);
       line-height: 1.8;
       font-size: 18px;
+      padding: 0 20px;
     }
 
     header {
       background: linear-gradient(90deg, #f8bbd0, #fce4ec);
-      padding: 50px 20px;
+      padding: 40px 20px;
       text-align: center;
       border-bottom: 4px solid var(--main-color);
     }
@@ -35,6 +38,7 @@
       color: #ad1457;
       margin: 0;
       text-transform: uppercase;
+      font-weight: bold;
     }
 
     .container {
@@ -44,12 +48,12 @@
     }
 
     .intro {
-      background: #fff;
+      background: var(--card-bg-color);
       border-left: 8px solid var(--main-color);
       border-radius: 12px;
       padding: 30px;
       margin-bottom: 50px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 4px 16px var(--card-shadow);
     }
 
     .intro img {
@@ -58,20 +62,20 @@
       object-fit: cover;
       border-radius: 12px;
       margin-bottom: 20px;
-      border: 2px solid #f8bbd0;
+      border: 2px solid var(--accent-color);
     }
 
     .chart-card {
-      background: #fff;
+      background: var(--card-bg-color);
       border-radius: 16px;
       margin-bottom: 50px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 6px 20px var(--card-shadow);
       overflow: hidden;
       transition: box-shadow 0.3s ease;
     }
 
     .chart-card:hover {
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
     }
 
     .chart-header {
@@ -82,8 +86,8 @@
 
     .chart-header h2 {
       margin: 0;
-      font-size: 1.6em;
-      color: #c2185b;
+      font-size: 1.8em;
+      color: #ad1457;
     }
 
     .iframe-wrapper {
@@ -125,10 +129,24 @@
 
     @media (max-width: 768px) {
       header h1 {
-        font-size: 2em;
+        font-size: 2.2em;
       }
       .chart-header h2 {
-        font-size: 1.4em;
+        font-size: 1.6em;
+      }
+    }
+
+    /* Thiết kế các nút, liên kết và bố cục cho các thiết bị di động */
+    @media (max-width: 576px) {
+      .container {
+        padding: 20px 10px;
+      }
+      .intro, .chart-card {
+        margin-bottom: 30px;
+        padding: 20px;
+      }
+      .view-link {
+        padding: 10px 24px;
       }
     }
   </style>
