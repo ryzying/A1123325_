@@ -13,19 +13,52 @@
       --text-color: #4e2a35;
     }
 
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Noto Sans TC', sans-serif;
       background-color: var(--bg-color);
       color: var(--text-color);
-      line-height: 1.6;
+    }
+
+    /* === Navigation Bar === */
+    nav {
+      background: #ffffff;
+      border-bottom: 2px solid var(--main-color);
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav .logo {
+      font-size: 1.4em;
+      color: var(--main-color);
+      font-weight: bold;
+    }
+
+    nav .nav-links a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav .nav-links a:hover {
+      color: var(--main-color);
     }
 
     header {
       background: linear-gradient(90deg, #f8bbd0, #fce4ec);
       padding: 40px 20px;
       text-align: center;
-      border-bottom: 4px solid var(--main-color);
     }
 
     header h1 {
@@ -55,17 +88,22 @@
       margin-bottom: 40px;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
       overflow: hidden;
-      transition: box-shadow 0.3s ease;
-    }
-
-    .chart-card:hover {
-      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
     }
 
     .chart-header {
       background-color: var(--accent-color);
       padding: 20px;
+      display: flex;
+      align-items: center;
       border-bottom: 2px solid #f8bbd0;
+    }
+
+    .chart-header svg {
+      width: 30px;
+      height: 30px;
+      margin-right: 12px;
+      fill: #c2185b;
+      flex-shrink: 0;
     }
 
     .chart-header h2 {
@@ -115,36 +153,50 @@
       header h1 {
         font-size: 1.8em;
       }
-      .chart-header h2 {
-        font-size: 1.3em;
+      nav .nav-links {
+        display: none;
       }
     }
   </style>
 </head>
 <body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">📊 高雄市人口統計</div>
+    <div class="nav-links">
+      <a href="#">首頁</a>
+      <a href="#">資料說明</a>
+      <a href="#">聯絡我們</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
   <header>
     <h1>113年12月 高雄市五歲年齡組性別人口統計</h1>
   </header>
 
+  <!-- Main Content -->
   <div class="container">
     <div class="intro">
       <p>
-        本頁面展示來自 PlotDB 的互動式圖表，以視覺化方式呈現高雄市各行政區五歲年齡組別（60歲以上）性別人口統計資料。
-        您可以透過點擊圖表深入觀察特定年齡層或行政區的老年人口結構。
+        本頁面展示來自 PlotDB 的互動式圖表，直觀呈現高雄市五歲年齡組別性別人口統計（60歲以上）。
+        點擊圖表可檢視詳細資訊與區域分布。
       </p>
     </div>
 
     <!-- Chart 1 -->
     <div class="chart-card">
       <div class="chart-header">
+        <!-- SVG icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 17h2v-7H3v7zm4 0h2V7H7v10zm4 0h2v-4h-2v4zm4 0h2v-9h-2v9zm4 0h2v-2h-2v2z"/></svg>
         <h2>圖表一：60至80歲年齡層</h2>
       </div>
       <div class="iframe-wrapper">
         <iframe src="https://plotdb.io/v/chart/37437" allowfullscreen></iframe>
       </div>
       <div class="chart-description">
-        <p>展示高雄市113年12月間60至80歲人口（依五歲一組）之性別分布，資料來源為戶政司。</p>
-        <p>本圖有助於分析老化結構與潛在社會福利需求。</p>
+        <p>展示113年12月高雄市60至80歲人口（按五歲組）性別分布。</p>
         <a class="view-link" href="https://plotdb.io/v/chart/37437" target="_blank">前往 PlotDB 查看</a>
       </div>
     </div>
@@ -152,14 +204,15 @@
     <!-- Chart 2 -->
     <div class="chart-card">
       <div class="chart-header">
+        <!-- SVG icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
         <h2>圖表二：80歲以上超高齡人口</h2>
       </div>
       <div class="iframe-wrapper">
         <iframe src="https://plotdb.io/v/chart/37448" allowfullscreen></iframe>
       </div>
       <div class="chart-description">
-        <p>針對高雄市80歲以上（80-84、85-89、90-94、95-99、100歲以上）人口進行性別統計。</p>
-        <p>可協助政府機關規劃長照與高齡社區資源配置。</p>
+        <p>聚焦80歲以上高齡人口性別統計，供規劃長照與社會資源參考。</p>
         <a class="view-link" href="https://plotdb.io/v/chart/37448" target="_blank">前往 PlotDB 查看</a>
       </div>
     </div>
