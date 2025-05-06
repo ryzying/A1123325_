@@ -3,68 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>113年12月行政區五歲年齡組性別人口統計_高雄市</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600&display=swap" rel="stylesheet">
+  <title>高雄市性別人口統計圖表</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Noto Sans TC', sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #fce4ec, #f8bbd0);
-      color: #4e2a35;
+      background: #f9f9fc;
+      color: #333;
     }
 
     .container {
-      max-width: 960px;
-      margin: 40px auto;
-      padding: 0 20px;
+      max-width: 1080px;
+      margin: auto;
+      padding: 40px 20px;
     }
 
-    h1 {
+    header {
       text-align: center;
-      font-size: 2.8em;
-      color: #ad1457;
-      margin-bottom: 30px;
-      background: linear-gradient(90deg, #f8bbd0, #fce4ec);
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      margin-bottom: 50px;
     }
 
-    .description {
-      background: #fff0f7;
-      border-left: 6px solid #ec407a;
-      border-radius: 12px;
-      padding: 20px 25px;
-      margin-bottom: 40px;
-      box-shadow: 0 2px 10px rgba(236, 64, 122, 0.1);
+    header h1 {
+      font-size: 2.6em;
+      color: #4a148c;
+      margin-bottom: 10px;
     }
 
-    .description p {
+    header p {
+      font-size: 1.1em;
+      color: #6a6a6a;
+    }
+
+    .info-box {
+      background: #ede7f6;
+      padding: 25px;
+      border-left: 6px solid #7e57c2;
+      border-radius: 10px;
+      margin-bottom: 50px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .info-box p {
       margin: 0;
       line-height: 1.8;
       font-size: 1.1em;
     }
 
-    .chart-section {
-      background: #ffffff;
+    .chart-card {
+      background: #fff;
       border-radius: 16px;
-      padding: 25px;
-      margin-bottom: 50px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      padding: 30px;
+      margin-bottom: 60px;
+      transition: transform 0.3s ease;
     }
 
-    .chart-section:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+    .chart-card:hover {
+      transform: translateY(-5px);
     }
 
     .chart-title {
-      text-align: center;
-      font-size: 1.6em;
-      color: #c2185b;
+      font-size: 1.5em;
+      color: #512da8;
       margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .chart-title::before {
+      content: '📊';
+      font-size: 1.4em;
     }
 
     .iframe-wrapper {
@@ -73,7 +88,7 @@
       height: 0;
       overflow: hidden;
       border-radius: 12px;
-      box-shadow: 0 0 14px rgba(255, 105, 180, 0.15);
+      margin-bottom: 20px;
     }
 
     .iframe-wrapper iframe {
@@ -88,74 +103,79 @@
 
     .view-link {
       display: inline-block;
-      text-align: center;
-      margin: 20px auto 0;
-      text-decoration: none;
-      background-color: #f06292;
+      margin-top: 10px;
+      background-color: #7e57c2;
       color: #fff;
-      padding: 12px 28px;
-      font-weight: 600;
-      font-size: 1em;
+      padding: 10px 20px;
       border-radius: 8px;
-      transition: background 0.3s, transform 0.2s;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
     }
 
     .view-link:hover {
-      background-color: #ec407a;
-      transform: scale(1.05);
+      background-color: #5e35b1;
     }
 
     .chart-description {
-      margin-top: 20px;
+      margin-top: 15px;
       font-size: 1em;
-      line-height: 1.8;
-      color: #6b4e57;
-      background: #fdf4f8;
+      line-height: 1.7;
+      color: #555;
+      background: #f3e5f5;
       padding: 18px;
-      border-left: 4px solid #ec407a;
-      border-radius: 10px;
+      border-left: 4px solid #ab47bc;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      .chart-title {
+        font-size: 1.3em;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>113年12月行政區五歲年齡組性別人口統計_高雄市</h1>
+    <header>
+      <h1>高雄市｜113年12月年齡別性別人口統計</h1>
+      <p>互動視覺化圖表，快速掌握老年人口結構與性別分布</p>
+    </header>
 
-    <div class="description">
+    <div class="info-box">
       <p>
-        本頁面展示了來自 PlotDB 的互動式圖表，透過視覺化的方式幫助您更直觀地了解資料趨勢與洞察。每個圖表都具備互動功能，可點擊查看更多細節，亦可跳轉至原始圖表頁面進行進一步分析。
+        以下圖表由 <strong>PlotDB</strong> 提供，展現高雄市各行政區於 113 年 12 月的五歲年齡組性別人口結構。<br>
+        使用者可透過互動方式觀察各年齡層的分布趨勢，並深入探索地區差異，進行更深入的社會人口學分析。
       </p>
     </div>
 
-    <!-- 第一個圖表 -->
-    <div class="chart-section">
-      <h2 class="chart-title">圖表一：60至80歲年齡層</h2>
+    <!-- Chart 1 -->
+    <div class="chart-card">
+      <h2 class="chart-title">60～80歲年齡層性別分布</h2>
       <div class="iframe-wrapper">
         <iframe src="https://plotdb.io/v/chart/37437" allowfullscreen></iframe>
       </div>
-      <p style="text-align: center;">
-        <a class="view-link" href="https://plotdb.io/v/chart/37437" target="_blank">在 PlotDB 上查看完整圖表</a>
-      </p>
+      <a class="view-link" href="https://plotdb.io/v/chart/37437" target="_blank">查看完整圖表</a>
       <div class="chart-description">
-        <p>本資料為113年12月高雄市村里級五歲年齡組（65-80歲）性別人口統計，依內政部戶政司登記戶籍資料彙整。</p>
-        <p>統計以行政區、村里、年齡組（65-69、70-74、75-79歲）及性別分類，反映設籍人口結構，可能因遷徙、出生、死亡等因素與實際居住人口略有差異。</p>
-        本圖表呈現高雄市113年12月間，<strong>60至80歲年齡層</strong>的性別人口分布情形。透過五歲一組的方式，詳細展示各行政區中男性與女性的老年人口數，便於分析老化程度與潛在社福需求。互動圖表功能可協助快速比較區域差異，並觀察人口結構趨勢。
+        <p>統計資料來自高雄市村里級五歲年齡組（65～79歲）性別人口。年齡層區分為：65～69、70～74、75～79 歲。</p>
+        <p>本圖表以行政區為單位，比較男性與女性老年人口分布，協助掌握人口老化趨勢，評估地區性高齡化程度與社會照護需求。</p>
       </div>
     </div>
 
-    <!-- 第二個圖表 -->
-    <div class="chart-section">
-      <h2 class="chart-title">圖表二：80歲以上超高齡人口</h2>
+    <!-- Chart 2 -->
+    <div class="chart-card">
+      <h2 class="chart-title">80歲以上超高齡人口統計</h2>
       <div class="iframe-wrapper">
         <iframe src="https://plotdb.io/v/chart/37448" allowfullscreen></iframe>
       </div>
-      <p style="text-align: center;">
-        <a class="view-link" href="https://plotdb.io/v/chart/37448" target="_blank">在 PlotDB 上查看完整圖表</a>
-      </p>
+      <a class="view-link" href="https://plotdb.io/v/chart/37448" target="_blank">查看完整圖表</a>
       <div class="chart-description">
-        <p>本資料為113年12月高雄市村里級五歲年齡組（80-100歲以上）性別人口統計，依內政部戶政司登記戶籍資料彙整。</p>
-        <p>統計以行政區、村里、年齡組（80-84、85-89、90-94、95-99、100歲以上）及性別分類，反映設籍人口結構，可能因遷徙、出生、死亡等因素與實際居住人口略有差異。</p>
-        此圖聚焦於高雄市各行政區<strong>80歲以上超高齡人口</strong>的性別統計。此年齡層為高齡化社會中的關鍵觀察族群，圖表有助於評估長照、醫療與社區關懷資源配置的迫切性。使用者可經由互動操作深入了解特定區域的長者性別結構與人口集中度。
+        <p>統計包含 80～84、85～89、90～94、95～99、100 歲以上等分組，並依性別分類。</p>
+        <p>本圖可協助評估超高齡人口集中區域，提供長照、社區資源、醫療服務規劃的重要依據。</p>
       </div>
     </div>
   </div>
