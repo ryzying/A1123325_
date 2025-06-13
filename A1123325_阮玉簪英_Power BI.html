@@ -2,71 +2,67 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <title>數據觀察報導｜阮玉簪英 Power BI 五分報導</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>數據視覺化展示 - Power BI</title>
   <style>
-    body { background: #fff0f5; color: #333; font-family: "Helvetica Neue", sans-serif; margin:0; padding:0; }
-    header { background: #ffb6c1; padding:20px; text-align:center; color:#fff; }
-    header h1 { margin:0; font-size:2.5em; }
-    .section { padding:30px; max-width:900px; margin:0 auto; }
-    iframe { width:100%; height:400px; border:2px solid #ff69b4; border-radius:8px; }
-    .commentary { background:#ffe4e1; padding:20px; margin-top:15px; border-radius:8px; box-shadow:0 4px 8px rgba(255,182,193,0.5); }
-    .commentary h2 { color:#d63384; margin-top:0; }
-    footer { text-align:center; padding:15px; font-size:0.9em; color:#888; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", "Microsoft JhengHei", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .frame-container {
+      width: 90%;
+      height: 80%;
+      border: 8px solid #ffffff33;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 40px rgba(0,0,0,0.5);
+      animation: slideUp 2s ease-out;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
-
-  <header>
-    <h1>數據觀察報導</h1>
-    <p>專題：阮玉簪英 Power BI 分析（五分報導）</p>
-  </header>
-
-  <!-- 第一頁 -->
-  <div class="section">
-    <iframe title="Page1" src="https://app.powerbi.com/view?…&pageName=ReportSection1" allowFullScreen></iframe>
-    <div class="commentary">
-      <h2>第一章：整體概覽</h2>
-      <p>本頁呈現全局 KPI 及關鍵指標，能快速把握整體趨勢，例如銷售額、成長率與目標達成度等核心數據，為後續深入分析提供方向。</p>
-    </div>
+  <h1>互動數據儀表板展示</h1>
+  <div class="frame-container">
+    <iframe title="A1123325_阮玉簪英_Power BI"
+      src="https://app.powerbi.com/view?r=eyJrIjoiNGY2MjA0MjQtZDQzYy00ZmI0LWE2NWEtYjIyMmMyODhkMmE0IiwidCI6IjVhNDg0OTUzLTc3ZWYtNDJlYy05MGNmLTJmNGUxMDM3ZmZjNyIsImMiOjEwfQ%3D%3D"
+      allowfullscreen="true">
+    </iframe>
   </div>
-
-  <!-- 第二頁 -->
-  <div class="section">
-    <iframe title="Page2" src="https://app.powerbi.com/view?…&pageName=ReportSection2" allowFullScreen></iframe>
-    <div class="commentary">
-      <h2>第二章：地區分析</h2>
-      <p>本頁細分各區域或門市的表現，觀察哪些區域貢獻最大，並辨識潛力市場或表現落後的地理區域，為資源調度提供依據。</p>
-    </div>
-  </div>
-
-  <!-- 第三頁 -->
-  <div class="section">
-    <iframe title="Page3" src="https://app.powerbi.com/view?…&pageName=ReportSection3" allowFullScreen></iframe>
-    <div class="commentary">
-      <h2>第三章：產品／項目比較</h2>
-      <p>分析各項產品或服務線的銷售組成與排名，透過條形圖或環狀圖比較，協助找出暢銷品與成長佳績，優化商品策略。</p>
-    </div>
-  </div>
-
-  <!-- 第四頁 -->
-  <div class="section">
-    <iframe title="Page4" src="https://app.powerbi.com/view?…&pageName=ReportSection4" allowFullScreen></iframe>
-    <div class="commentary">
-      <h2>第四章：時間序列趨勢</h2>
-      <p>透過折線圖或區域圖展現歷史時間走勢（如月／季銷售變化），辨識季節性波動與關鍵時間點，助於預測與規劃。</p>
-    </div>
-  </div>
-
-  <!-- 第五頁 -->
-  <div class="section">
-    <iframe title="Page5" src="https://app.powerbi.com/view?…&pageName=ReportSection5" allowFullScreen></iframe>
-    <div class="commentary">
-      <h2>第五章：交互篩選＋洞察</h2>
-      <p>這一頁強調使用者互動操作，結合篩選器與切片器展現不同情境下的分析結果，提升資料探索的靈活性與深度。</p>
-    </div>
-  </div>
-
-  <footer>製作單位：數據新聞小組｜© 2025 數據觀察報導</footer>
-
 </body>
 </html>
